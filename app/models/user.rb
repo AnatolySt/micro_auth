@@ -1,5 +1,6 @@
 class User < Sequel::Model
   plugin :secure_password, include_validations: false
+  one_to_many :sessions
 
   def validate
     super
